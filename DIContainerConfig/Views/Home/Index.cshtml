@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Person>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div class="m-1 p-1">
+        <table class="table table-bordered table-sm table-striped">
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td><td>@item.FullName</td>
+                </tr>
+            }
+        </table>   
+    </div>
+    <div class="bg-info">
+        @ViewData["Singleton"]
+    </div>
+</div>
